@@ -6,6 +6,7 @@ RUN cp /etc/apk/repositories /etc/apk/repositories.bak \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone \
     && echo "http://mirrors.aliyun.com/alpine/v3.4/main/" > /etc/apk/repositories \
+    && apk update \
     && mkdir -p /root/py/venv \
     && mkdir /root/.pip/ \
     && pip3 install -U pip \
